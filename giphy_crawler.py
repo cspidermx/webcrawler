@@ -6,6 +6,7 @@ from dateutil import parser
 from dateutil.tz import gettz
 from datetime import datetime
 import config
+import localdb
 
 
 def __apnd (txt, frst, scnd, epty, start):
@@ -25,10 +26,13 @@ def __apnd (txt, frst, scnd, epty, start):
 
 APIKEY = config.APIKEYhyperrpg  # config.APIKEYcspidermx
 prefix = 'hyperrpg'
+db = 'hypergifsdata.db'
 
 with open(prefix + 'Data.csv') as csvfile:
+    ldb = localdb.open(db)
+    localdb.cleandata(ldb)
     reader = csv.DictReader(csvfile)
-    fieldnames = ['GIF URL', 'VIEWS', 'RATING', 'ULD', 'ULM', 'ULY', 'ULT', 'TRD', 'TRM', 'TRY', 'TRT', 'TAGS']
+    fieldnames = ['ID', 'GIF URL', 'VIEWS', 'RATING', 'ULD', 'ULM', 'ULY', 'ULT', 'TRD', 'TRM', 'TRY', 'TRT', 'TAGS']
     csvfile2 = open(prefix + 'TAGS.csv', 'w', newline='')
     writer = csv.DictWriter(csvfile2, fieldnames=fieldnames)
     writer.writeheader()
@@ -44,9 +48,9 @@ with open(prefix + 'Data.csv') as csvfile:
     for row in reader:
         i += 1
         print('(', i, '/', row_count, ')')
-        idGIF = __apnd(row['Gif URL'], 'https://media.giphy.com/media/', '/giphy.gif', '', 0)
-        gifurl = 'https://giphy.com/gifs/' + idGIF[0] + '/html5'
-        apiurl = 'https://api.giphy.com/v1/gifs/' + idGIF[0] + '?api_key=' + APIKEY
+        idGIF, idx = __apnd(row['Gif URL'], 'https://media.giphy.com/media/', '/giphy.gif', '', 0)
+        gifurl = 'https://giphy.com/gifs/' + idGIF + '/html5'
+        apiurl = 'https://api.giphy.com/v1/gifs/' + idGIF + '?api_key=' + APIKEY
         if row['Is Public'] == 'true':
             try:
                 sauce = urllib.request.urlopen(apiurl).read()
@@ -80,37 +84,26 @@ with open(prefix + 'Data.csv') as csvfile:
                     for mt in soup.find_all('meta'):
                         if 'name' in mt.attrs:
                             if mt['name'] == 'keywords':
-                                # ['GIF URL', 'VIEWS', 'RATING',
-                                # 'ULD', 'ULM', 'ULY', 'ULT',
-                                # 'TRD', 'TRM', 'TRY', 'TRT',
-                                # 'TAGS']
-                                print({'GIF URL': row['Gif URL'],
-                                       'VIEWS': row['View Count'],
-                                       'RATING': rating,
-                                       'ULD': upldate.day,
-                                       'ULM': upldate.month,
-                                       'ULY': upldate.year,
-                                       'ULT': str(upldate.time()),
-                                       'TRD': tredate.day,
-                                       'TRM': tredate.month,
-                                       'TRY': tredate.year,
-                                       'TRT': str(tredate.time()),
-                                       'TAGS': mt['content'].replace(', ', '|')})
-                                writer.writerow({'GIF URL': row['Gif URL'],
-                                                 'VIEWS': row['View Count'],
-                                                 'RATING': rating,
-                                                 'ULD': upldate.day,
-                                                 'ULM': upldate.month,
-                                                 'ULY': upldate.year,
-                                                 'ULT': str(upldate.time()),
-                                                 'TRD': tredate.day,
-                                                 'TRM': tredate.month,
-                                                 'TRY': tredate.year,
-                                                 'TRT': str(tredate.time()),
-                                                 'TAGS': mt['content'].replace(', ', '|')})
+                                datadict = {'ID': idGIF,
+                                            'GIF URL': row['Gif URL'],
+                                            'VIEWS': int(row['View Count']),
+                                            'RATING': rating,
+                                            'ULD': upldate.day,
+                                            'ULM': upldate.month,
+                                            'ULY': upldate.year,
+                                            'ULT': str(upldate.time()),
+                                            'TRD': tredate.day,
+                                            'TRM': tredate.month,
+                                            'TRY': tredate.year,
+                                            'TRT': str(tredate.time()),
+                                            'TAGS': mt['content'].replace(', ', '|')}
+                                localdb.insert(ldb, datadict)
+                                writer.writerow(datadict)
+                                print(datadict)
         else:
             count += int(row['View Count'])
             delgifs += 1
+    localdb.close(ldb)
     print({'GIF URL': 'ERASED GIFS', 'VIEWS': count, 'RATING': delgifs})
     writer.writerow({'GIF URL': 'ERASED GIFS', 'VIEWS': count, 'RATING': delgifs})
     csvfile2.close()
