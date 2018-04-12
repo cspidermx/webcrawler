@@ -5,6 +5,7 @@ import json
 from dateutil import parser
 from dateutil.tz import gettz
 from datetime import datetime
+import config
 
 
 def __apnd (txt, frst, scnd, epty, start):
@@ -22,10 +23,13 @@ def __apnd (txt, frst, scnd, epty, start):
     return val, idx2
 
 
-with open('hyperrpg20180411.csv') as csvfile:
+APIKEY = config.APIKEYhyperrpg  # config.APIKEYcspidermx
+prefix = 'hyperrpg'
+
+with open(prefix + 'Data.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     fieldnames = ['GIF URL', 'VIEWS', 'RATING', 'ULD', 'ULM', 'ULY', 'ULT', 'TRD', 'TRM', 'TRY', 'TRT', 'TAGS']
-    csvfile2 = open('hyperrpgTAGS.csv', 'w', newline='')
+    csvfile2 = open(prefix + 'TAGS.csv', 'w', newline='')
     writer = csv.DictWriter(csvfile2, fieldnames=fieldnames)
     writer.writeheader()
     gifurl=''
@@ -42,7 +46,7 @@ with open('hyperrpg20180411.csv') as csvfile:
         print('(', i, '/', row_count, ')')
         idGIF = __apnd(row['Gif URL'], 'https://media.giphy.com/media/', '/giphy.gif', '', 0)
         gifurl = 'https://giphy.com/gifs/' + idGIF[0] + '/html5'
-        apiurl = 'https://api.giphy.com/v1/gifs/' + idGIF[0] + '?api_key=8I9MzBtUTMD4ObOS7BqF9DqnYS7MGZ9k'
+        apiurl = 'https://api.giphy.com/v1/gifs/' + idGIF[0] + '?api_key=' + APIKEY
         if row['Is Public'] == 'true':
             try:
                 sauce = urllib.request.urlopen(apiurl).read()

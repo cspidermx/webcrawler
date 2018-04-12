@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84006d80-22ee-4dfe-af69-bd50e82e2518" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/giphy_crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/giphy_crawler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hyperrpgTAGS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hyperrpgTAGS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hyperrpg20180411.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,8 +29,8 @@
       <file leaf-file-name="giphy_crawler.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/giphy_crawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="717">
-              <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+            <state relative-caret-position="425">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -60,8 +58,8 @@
         <option value="$PROJECT_DIR$/crimsoncrawler.py" />
         <option value="$PROJECT_DIR$/tutorial/tutorial/spiders/quotes_spider.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/crimson_crawler.py" />
+        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/giphy_crawler.py" />
       </list>
     </option>
@@ -78,6 +76,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -89,7 +88,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -191,6 +189,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24920969" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -215,6 +214,26 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/crimson_crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="61" column="38" selection-start-line="57" selection-end-line="61" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/giphy_crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/crimson_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
@@ -318,7 +337,6 @@
     <entry file="file://$PROJECT_DIR$/crimsoncrawler.py" />
     <entry file="file://$PROJECT_DIR$/crimsoncrawler.py" />
     <entry file="file://$PROJECT_DIR$/tutorial/tutorial/spiders/quotes_spider.py" />
-    <entry file="file://$PROJECT_DIR$/config.py" />
     <entry file="file://$PROJECT_DIR$/crimson_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
@@ -343,10 +361,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/giphy_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
