@@ -38,7 +38,7 @@ db = 'hypergifsdata.db'
 ldb = open(db)
 cur = ldb.cursor()
 i = 0
-cur.execute('SELECT * FROM GifData where (TAGS like "%perception%") ')
+cur.execute('SELECT * FROM GifData where (TAGS not like "%hyperrpg%") ')
 for registro in cur:
     i += 1
     print(i, registro)
