@@ -55,6 +55,15 @@ with open(prefix + 'Data.csv') as csvfile:
             try:
                 sauce = urllib.request.urlopen(apiurl).read()
                 metadata = json.loads(sauce)
+                if 'data' in metadata:
+                    if ('url' not in metadata['data']) or \
+                        ('rating' not in metadata['data']) or \
+                        ('import_datetime' not in metadata['data']) or \
+                        ('trending_datetime' not in metadata['data']):
+                            raise ValueError('Not Enough Info')
+                else:
+                    raise ValueError('Not Enough Info')
+                gurl = metadata['data']['url']
                 rating = metadata['data']['rating']
                 upload = metadata['data']['import_datetime']
                 upload = parser.parse(upload, tzinfos=tzinfos).strftime('%d/%m/%Y %H:%M:%S')
@@ -65,7 +74,7 @@ with open(prefix + 'Data.csv') as csvfile:
                     tredate = datetime.strptime(trend, '%d/%m/%Y %H:%M:%S')
                 except:
                     tredate = datetime(2000, 1, 1)
-            except urllib.error.URLError:
+            except:
                 sauce = None
                 count += int(row['View Count'])
                 delgifs += 1
@@ -85,7 +94,7 @@ with open(prefix + 'Data.csv') as csvfile:
                         if 'name' in mt.attrs:
                             if mt['name'] == 'keywords':
                                 datadict = {'ID': idGIF,
-                                            'GIF URL': row['Gif URL'],
+                                            'GIF URL': gurl,
                                             'VIEWS': int(row['View Count']),
                                             'RATING': rating,
                                             'ULD': upldate.day,

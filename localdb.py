@@ -41,6 +41,7 @@ i = 0
 cur.execute('SELECT * FROM GifData where (TAGS not like "%hyperrpg%") ')
 for registro in cur:
     i += 1
-    print(i, registro)
+    # print(i, registro)
+    print(registro[1], registro[2], registro[12])
 cur.close()
 close(ldb)
