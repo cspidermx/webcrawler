@@ -33,7 +33,7 @@ with open(prefix + 'Data.csv') as csvfile:
     localdb.cleandata(ldb)
     reader = csv.DictReader(csvfile)
     fieldnames = ['ID', 'GIF URL', 'VIEWS', 'RATING', 'ULD', 'ULM', 'ULY', 'ULT', 'TRD', 'TRM', 'TRY', 'TRT', 'TAGS']
-    csvfile2 = open(prefix + 'TAGS.csv', 'w', newline='')
+    csvfile2 = open(prefix + 'TAGS.csv', 'w', newline='', encoding='utf-8')
     writer = csv.DictWriter(csvfile2, fieldnames=fieldnames)
     writer.writeheader()
     gifurl=''
@@ -106,9 +106,15 @@ with open(prefix + 'Data.csv') as csvfile:
                                             'TRY': tredate.year,
                                             'TRT': str(tredate.time()),
                                             'TAGS': mt['content'].replace(', ', '|')}
+                                print(datadict['ID'])
+                                try:
+                                    writer.writerow(datadict)
+                                except:
+                                    print(datadict['GIF URL'])
+                                    datadict['TAGS'] = "ENCODINGERROR"
+                                    writer.writerow(datadict)
                                 localdb.insert(ldb, datadict)
-                                writer.writerow(datadict)
-                                print(datadict)
+
         else:
             count += int(row['View Count'])
             delgifs += 1
