@@ -6,7 +6,7 @@ from dateutil import parser
 from dateutil.tz import gettz
 from datetime import datetime
 import config
-import localdb
+from localdb import open as ldbopen, close as ldbclose, insert as ldbinsert, cleandata as ldbcleandata
 
 
 def __apnd (txt, frst, scnd, epty, start):
@@ -29,8 +29,8 @@ prefix = 'hyperrpg'
 db = 'hypergifsdata.db'
 
 with open(prefix + 'Data.csv') as csvfile:
-    ldb = localdb.open(db)
-    localdb.cleandata(ldb)
+    ldb = ldbopen(db)
+    ldbcleandata(ldb)
     reader = csv.DictReader(csvfile)
     fieldnames = ['ID', 'GIF URL', 'VIEWS', 'RATING', 'ULD', 'ULM', 'ULY', 'ULT', 'TRD', 'TRM', 'TRY', 'TRT', 'TAGS']
     csvfile2 = open(prefix + 'TAGS.csv', 'w', newline='', encoding='utf-8')
@@ -113,12 +113,12 @@ with open(prefix + 'Data.csv') as csvfile:
                                     print(datadict['GIF URL'])
                                     datadict['TAGS'] = "ENCODINGERROR"
                                     writer.writerow(datadict)
-                                localdb.insert(ldb, datadict)
+                                ldbinsert(ldb, datadict)
 
         else:
             count += int(row['View Count'])
             delgifs += 1
-    localdb.close(ldb)
+    ldbclose(ldb)
     print({'GIF URL': 'ERASED GIFS', 'VIEWS': count, 'RATING': delgifs})
     writer.writerow({'GIF URL': 'ERASED GIFS', 'VIEWS': count, 'RATING': delgifs})
     csvfile2.close()

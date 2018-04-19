@@ -38,10 +38,11 @@ db = 'hypergifsdata.db'
 ldb = open(db)
 cur = ldb.cursor()
 i = 0
-cur.execute('SELECT * FROM GifData where (URL like "%1hAZF0RQRKXEeQvebx%") ')
+cur.execute('SELECT * FROM GifData where (VIEWS < 1000) ')
 for registro in cur:
     i += 1
     # print(i, registro)
     print(registro[1], registro[2], registro[12])
+print(i, " - registros")
 cur.close()
 close(ldb)
