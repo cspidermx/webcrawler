@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84006d80-22ee-4dfe-af69-bd50e82e2518" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/query_gc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/giphy_crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/giphy_crawler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hypergifsdata.db" beforeDir="false" afterPath="$PROJECT_DIR$/hypergifsdata.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hyperrpgData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hyperrpgData.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hyperrpgTAGS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hyperrpgTAGS.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localdb.py" beforeDir="false" afterPath="$PROJECT_DIR$/localdb.py" afterDir="false" />
     </list>
@@ -28,11 +31,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="giphy_crawler.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="giphy_crawler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/giphy_crawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1071">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state>
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -43,8 +45,17 @@
       <file leaf-file-name="localdb.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/localdb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+            <state relative-caret-position="476">
+              <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="query_gc.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/query_gc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="73" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -84,6 +95,7 @@
         <option value="$PROJECT_DIR$/crawl_behindlogin.py" />
         <option value="$PROJECT_DIR$/localdb.py" />
         <option value="$PROJECT_DIR$/giphy_crawler.py" />
+        <option value="$PROJECT_DIR$/query_gc.py" />
       </list>
     </option>
   </component>
@@ -98,7 +110,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,6 +121,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -195,13 +207,13 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24762908" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3262987" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32570806" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32570806" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.26252723" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -215,13 +227,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/giphy_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1938">
@@ -536,16 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crimson_crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" selection-start-line="5" selection-end-line="35" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -567,20 +562,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/localdb.py">
+    <entry file="file://$PROJECT_DIR$/crimson_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+        <state relative-caret-position="340">
+          <caret line="22" selection-start-line="5" selection-end-line="35" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/giphy_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1071">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state>
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/localdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query_gc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="73" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
         </state>
       </provider>
     </entry>

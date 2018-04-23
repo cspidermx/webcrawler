@@ -1,7 +1,7 @@
 import sqlite3
 
 
-def open(db):
+def dbopen(db):
     try:
         con = sqlite3.connect(db)
     except:
@@ -9,7 +9,7 @@ def open(db):
     return con
 
 
-def close(con):
+def dbclose(con):
     try:
         con.close
     except:
@@ -17,7 +17,7 @@ def close(con):
     return True
 
 
-def insert(c, data):
+def dbinsert(c, data):
     cur = c.cursor()
     reg = (data['ID'], data['GIF URL'], data['VIEWS'], data['RATING'], data['ULD'], data['ULM'], data['ULY'],
            data['ULT'], data['TRD'], data['TRM'], data['TRY'], data['TRT'], data['TAGS'])
@@ -26,23 +26,11 @@ def insert(c, data):
     cur.close()
 
 
-def cleandata(c):
+def dbcleandata(c):
     cur = c.cursor()
     cur.execute('DELETE FROM GifData')
     c.commit()
     cur.close()
 
 
-db = 'hypergifsdata.db'
 
-ldb = open(db)
-cur = ldb.cursor()
-i = 0
-cur.execute('SELECT * FROM GifData where (VIEWS < 1000) ')
-for registro in cur:
-    i += 1
-    # print(i, registro)
-    print(registro[1], registro[2], registro[12])
-print(i, " - registros")
-cur.close()
-close(ldb)

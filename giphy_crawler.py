@@ -6,7 +6,7 @@ from dateutil import parser
 from dateutil.tz import gettz
 from datetime import datetime
 import config
-from localdb import open as ldbopen, close as ldbclose, insert as ldbinsert, cleandata as ldbcleandata
+from localdb import dbopen as ldbopen, dbclose as ldbclose, dbinsert as ldbinsert, dbcleandata as ldbcleandata
 
 
 def __apnd (txt, frst, scnd, epty, start):
@@ -57,9 +57,9 @@ with open(prefix + 'Data.csv') as csvfile:
                 metadata = json.loads(sauce)
                 if 'data' in metadata:
                     if ('url' not in metadata['data']) or \
-                        ('rating' not in metadata['data']) or \
-                        ('import_datetime' not in metadata['data']) or \
-                        ('trending_datetime' not in metadata['data']):
+                            ('rating' not in metadata['data']) or \
+                            ('import_datetime' not in metadata['data']) or \
+                            ('trending_datetime' not in metadata['data']):
                             raise ValueError('Not Enough Info')
                 else:
                     raise ValueError('Not Enough Info')
@@ -114,7 +114,6 @@ with open(prefix + 'Data.csv') as csvfile:
                                     datadict['TAGS'] = "ENCODINGERROR"
                                     writer.writerow(datadict)
                                 ldbinsert(ldb, datadict)
-
         else:
             count += int(row['View Count'])
             delgifs += 1
