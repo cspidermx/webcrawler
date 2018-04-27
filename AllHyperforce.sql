@@ -1,1 +1,0 @@
-select * from GifData where (tags like "%hyperforce%") or (tags like "%hyper force%") or (tags like "%power rangers%")
