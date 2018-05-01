@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84006d80-22ee-4dfe-af69-bd50e82e2518" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/crawl_dir_tecs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AllHyperforce.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hypergifsdata.db" beforeDir="false" afterPath="$PROJECT_DIR$/hypergifsdata.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hyperrpgData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hyperrpgData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hyperrpgQuery.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hyperrpgQuery.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hyperrpgTAGS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hyperrpgTAGS.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +20,7 @@
       <file leaf-file-name="crimson_crawler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crimson_crawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
+            <state relative-caret-position="680">
               <caret line="42" column="46" selection-start-line="40" selection-start-column="4" selection-end-line="42" selection-end-column="46" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
@@ -27,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="giphy_crawler.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="giphy_crawler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/giphy_crawler.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -38,9 +40,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="query_gc.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="query_gc.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/query_gc.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="44" column="2" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="localdb.py" pinned="false" current-in-tab="false">
@@ -87,8 +93,8 @@
         <option value="$PROJECT_DIR$/crawl_behindlogin.py" />
         <option value="$PROJECT_DIR$/localdb.py" />
         <option value="$PROJECT_DIR$/giphy_crawler.py" />
-        <option value="$PROJECT_DIR$/query_gc.py" />
         <option value="$PROJECT_DIR$/crawl_dir_tecs.py" />
+        <option value="$PROJECT_DIR$/query_gc.py" />
       </list>
     </option>
   </component>
@@ -103,7 +109,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -115,6 +120,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,7 +211,7 @@
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32570806" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32570806" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.22889611" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.22727273" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -550,22 +556,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/query_gc.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawl_dir_tecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crimson_crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
+        <state relative-caret-position="680">
           <caret line="42" column="46" selection-start-line="40" selection-start-column="4" selection-end-line="42" selection-end-column="46" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
@@ -579,6 +579,13 @@
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query_gc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="44" column="2" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
         </state>
       </provider>
     </entry>
