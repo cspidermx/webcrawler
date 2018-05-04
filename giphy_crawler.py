@@ -32,7 +32,7 @@ with open(prefix + 'Data.csv') as csvfile:
     ldb = ldbopen(db)
     ldbcleandata(ldb)
     reader = csv.DictReader(csvfile)
-    fieldnames = ['ID', 'GIF URL', 'VIEWS', 'RATING', 'ULD', 'ULM', 'ULY', 'ULT', 'TRD', 'TRM', 'TRY', 'TRT', 'TAGS']
+    fieldnames = ['GifID', 'GIF URL', 'VIEWS', 'RATING', 'ULD', 'ULM', 'ULY', 'ULT', 'TRD', 'TRM', 'TRY', 'TRT', 'TAGS']
     csvfile2 = open(prefix + 'TAGS.csv', 'w', newline='', encoding='utf-8')
     writer = csv.DictWriter(csvfile2, fieldnames=fieldnames)
     writer.writeheader()
@@ -93,7 +93,7 @@ with open(prefix + 'Data.csv') as csvfile:
                     for mt in soup.find_all('meta'):
                         if 'name' in mt.attrs:
                             if mt['name'] == 'keywords':
-                                datadict = {'ID': idGIF,
+                                datadict = {'GifID': idGIF,
                                             'GIF URL': gurl,
                                             'VIEWS': int(row['View Count']),
                                             'RATING': rating,
@@ -106,7 +106,7 @@ with open(prefix + 'Data.csv') as csvfile:
                                             'TRY': tredate.year,
                                             'TRT': str(tredate.time()),
                                             'TAGS': mt['content'].replace(', ', '|')}
-                                print(datadict['ID'])
+                                print(datadict['GifID'])
                                 try:
                                     writer.writerow(datadict)
                                 except:

@@ -19,7 +19,7 @@ def dbclose(con):
 
 def dbinsert(c, data):
     cur = c.cursor()
-    reg = (data['ID'], data['GIF URL'], data['VIEWS'], data['RATING'], data['ULD'], data['ULM'], data['ULY'],
+    reg = (data['GifID'], data['GIF URL'], data['VIEWS'], data['RATING'], data['ULD'], data['ULM'], data['ULY'],
            data['ULT'], data['TRD'], data['TRM'], data['TRY'], data['TRT'], data['TAGS'])
     cur.execute("INSERT INTO GifData VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)", reg)
     c.commit()

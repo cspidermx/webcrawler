@@ -41,8 +41,8 @@ db = 'hypergifsdata.db'  # ULD(4) ULM(5) ULY(6)
 ldb = localdb.dbopen(db)
 cur = ldb.cursor()
 
-printrecords(cur)
-# tagnumbers(cur)
+# printrecords(cur)
+tagnumbers(cur)
 
 cur.close()
 localdb.dbclose(ldb)
