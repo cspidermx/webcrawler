@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/hyperrpgData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hyperrpgData.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hyperrpgQuery.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hyperrpgQuery.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hyperrpgTAGS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hyperrpgTAGS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/query_gc.py" beforeDir="false" afterPath="$PROJECT_DIR$/query_gc.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -110,6 +109,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,7 +121,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
