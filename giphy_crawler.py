@@ -113,7 +113,7 @@ with open(prefix + 'Data.csv') as csvfile:
                                     print(datadict['GIF URL'])
                                     datadict['TAGS'] = "ENCODINGERROR"
                                     writer.writerow(datadict)
-                                ldbinsert(ldb, datadict)
+                                # ldbinsert(ldb, datadict)
         else:
             count += int(row['View Count'])
             delgifs += 1
