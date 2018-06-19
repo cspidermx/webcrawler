@@ -47,7 +47,6 @@ with open(prefix + 'Data.csv') as csvfile:
     tzinfos = {"CST": gettz("America/Mexico_City")}
     for row in reader:
         i += 1
-        print('(', i, '/', row_count, ')')
         idGIF, idx = __apnd(row['Gif URL'], 'https://media.giphy.com/media/', '/giphy.gif', '', 0)
         gifurl = 'https://giphy.com/gifs/' + idGIF + '/html5'
         apiurl = 'https://api.giphy.com/v1/gifs/' + idGIF + '?api_key=' + APIKEY
@@ -106,7 +105,8 @@ with open(prefix + 'Data.csv') as csvfile:
                                             'TRY': tredate.year,
                                             'TRT': str(tredate.time()),
                                             'TAGS': mt['content'].replace(', ', '|')}
-                                print(datadict['GifID'])
+                                # print('(', i, '/', row_count, ')')
+                                print('(', i, '/', row_count, ')', datadict['GifID'])
                                 try:
                                     writer.writerow(datadict)
                                 except:
