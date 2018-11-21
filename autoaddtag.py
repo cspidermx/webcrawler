@@ -5,14 +5,18 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.options import Options as ffOptions
+from selenium.webdriver.chrome.options import Options as ChOptions
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import time
 
-firefox_options = ffOptions()
+# firefox_options = ffOptions()
+chrome_options = ChOptions()
 # firefox_options.set_headless(headless=True)
-firefox_driver = os.getcwd() + "\\geckodriver.exe"
-driver = webdriver.Firefox(firefox_options=firefox_options, executable_path=firefox_driver)
+# firefox_driver = os.getcwd() + "\\geckodriver.exe"
+chrome_driver = os.getcwd() + "\\chromedriver.exe"
+# driver = webdriver.Firefox(firefox_options=firefox_options, executable_path=firefox_driver)
+driver = webdriver.Chrome(chrome_options=chrome_options, executable_path=chrome_driver)
 url = 'https://giphy.com/login'
 driver.get(url)
 wait = WebDriverWait(driver, 10)
@@ -21,7 +25,7 @@ user = driver.find_element_by_name("email")
 driver.execute_script("arguments[0].setAttribute('value', '" + config.USERgiphy + "')", user)
 passw = driver.find_element_by_name("password")
 driver.execute_script("arguments[0].setAttribute('value', '" + config.PASSgiphy + "')", passw)
-btnlgn = driver.find_element_by_class_name("login")
+btnlgn = driver.find_element_by_class_name("form-components__CTAButton-abosvr-3")
 btnlgn.click()
 wait = WebDriverWait(driver, 20)
 wait.until(EC.visibility_of_element_located((By.ID, "upload-avatar")))
