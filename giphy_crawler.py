@@ -1,6 +1,7 @@
 import csv
 import bs4 as bs
 import urllib.request
+import urllib.error
 import json
 from dateutil import parser
 from dateutil.tz import gettz
